@@ -23,18 +23,18 @@ function print(err,data){
 }
 
 
-// const content1 = fs.readFile("a.txt","utf-8",print);
+const content1 = fs.readFile("a.txt","utf-8",print);
 
-// const content2 = fs.readFile("b.txt","utf-8",print);
-// console.log("done!!"); 
+const content2 = fs.readFile("b.txt","utf-8",print);
+console.log("done!!"); 
 
-// console.log("hi");
-// function timeout(){
-//     console.log("async done!!");
-// }
+console.log("hi");
+function timeout(){
+    console.log("async done!!");
+}
 
-// setTimeout(timeout,5000);
-// console.log("async");
+setTimeout(timeout,5000);
+console.log("async");
 
 
 function timeout(){
@@ -48,4 +48,12 @@ let c = 0;
 for(let i  = 0;i <1000000;i++){
     c++;
 }
+console.log(c);
+
+function calling(){
+    console.log("again async");
+}
+
+setTimeout(calling,1000);
+
 console.log(c);
